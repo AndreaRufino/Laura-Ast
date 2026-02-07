@@ -196,7 +196,7 @@ const App: React.FC = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-3xl"></div>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-               <div className="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-slate-100"><img src="https://picsum.photos/seed/lost/400/500" alt="Antes" className="w-full h-full object-cover" /></div>
+               <div className="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-slate-100 shadow-sm"><img src="https://i.postimg.cc/KcpsPpMf/Captura_de_tela_2026_02_07_013320.png" alt="Antes" className="w-full h-full object-cover" /></div>
                <div className="aspect-[3/4] rounded-2xl overflow-hidden border-2 border-slate-100"><img src="https://picsum.photos/seed/path/400/500" alt="Caminho" className="w-full h-full object-cover" /></div>
                <div className="aspect-[3/4] rounded-2xl overflow-hidden border-4 border-amber-500 shadow-xl"><img src="https://picsum.photos/seed/happy/400/500" alt="Depois" className="w-full h-full object-cover" /></div>
             </div>
