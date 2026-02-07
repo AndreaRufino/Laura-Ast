@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SERVICES, SPECIALTIES, TESTIMONIALS, FAQS, WHATSAPP_LINK, INSTAGRAM_LINK } from './constants';
-import OracleChat from './components/OracleChat';
 
 const App: React.FC = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -202,7 +201,7 @@ const App: React.FC = () => {
                  <img src="https://i.postimg.cc/Jh4B1xzs/Captura_de_tela_2026_02_07_021418.png" alt="Caminho" className="w-full h-full object-cover" />
                </div>
                <div className="aspect-[3/4] rounded-2xl overflow-hidden border-4 border-amber-500 shadow-xl">
-                 <img src="https://i.postimg.cc/4dRk6LH3/Captura-de-tela-2026-02-07-021737.png" alt="Depois" className="w-full h-full object-cover" />
+                 <img src="https://i.postimg.cc/4dRk6LH3/Captura-de-tela_2026_02_07_021737.png" alt="Depois" className="w-full h-full object-cover" />
                </div>
             </div>
 
@@ -319,9 +318,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Floating AI Assistant */}
-      <OracleChat />
     </div>
   );
 };
