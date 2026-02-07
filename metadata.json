@@ -1,0 +1,8 @@
+{
+  "name": "Laura Astróloga - Consultoria Mística",
+  "description": "Uma plataforma moderna e elegante para consultas de astrologia, tarô e orientações espirituais, integrada com um assistente de IA para previsões personalizadas.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
