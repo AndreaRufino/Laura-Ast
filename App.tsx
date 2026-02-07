@@ -4,6 +4,24 @@ import { SERVICES, SPECIALTIES, TESTIMONIALS, FAQS, WHATSAPP_LINK, INSTAGRAM_LIN
 const App: React.FC = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
+  // Reusable WhatsApp Icon component for consistency
+  const WhatsAppIcon = ({ size = 20, className = "" }) => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className={className}
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"></path>
+    </svg>
+  );
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -29,7 +47,7 @@ const App: React.FC = () => {
               target="_blank" 
               className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-green-200"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+              <WhatsAppIcon />
               <span className="hidden sm:inline">WhatsApp</span>
             </a>
           </div>
@@ -70,7 +88,8 @@ const App: React.FC = () => {
                 target="_blank"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-amber-500 text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl shadow-purple-200 hover:scale-105 transition-transform"
               >
-                📅 Agende sua Consulta
+                <WhatsAppIcon size={24} />
+                Agende sua Consulta
               </a>
             </div>
 
@@ -178,7 +197,8 @@ const App: React.FC = () => {
                <h4 className="text-2xl font-bold mb-2">🌍 Atendimento Online Global</h4>
                <p className="opacity-80">Consultas para todo Brasil e Exterior via WhatsApp ou Vídeo.</p>
              </div>
-             <a href={WHATSAPP_LINK} className="bg-amber-500 hover:bg-amber-400 text-purple-900 font-bold px-8 py-4 rounded-full transition-colors whitespace-nowrap">
+             <a href={WHATSAPP_LINK} className="bg-amber-500 hover:bg-amber-400 text-purple-900 font-bold px-8 py-4 rounded-full transition-colors whitespace-nowrap flex items-center gap-2">
+               <WhatsAppIcon />
                Consultar Agora
              </a>
           </div>
@@ -267,7 +287,8 @@ const App: React.FC = () => {
             <div className="mt-12 text-center p-8 bg-gradient-to-r from-purple-50 to-amber-50 rounded-3xl border border-purple-100">
                <p className="text-slate-700 mb-6 font-medium">Ainda tem dúvidas? Fale comigo diretamente!</p>
                <a href={WHATSAPP_LINK} target="_blank" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-2 mx-auto max-w-xs">
-                 💬 Enviar Sua Pergunta
+                 <WhatsAppIcon />
+                 Enviar Sua Pergunta
                </a>
             </div>
           </div>
@@ -287,7 +308,8 @@ const App: React.FC = () => {
                 target="_blank"
                 className="inline-flex items-center gap-3 bg-white text-purple-700 hover:bg-slate-100 px-12 py-5 rounded-full text-xl font-bold transition-all shadow-2xl hover:scale-105"
               >
-                💬 Fale Comigo no WhatsApp
+                <WhatsAppIcon className="text-green-500" />
+                Fale Comigo no WhatsApp
               </a>
             </div>
           </div>
@@ -307,7 +329,7 @@ const App: React.FC = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
               <a href={WHATSAPP_LINK} target="_blank" className="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-slate-800 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                <WhatsAppIcon />
               </a>
             </div>
           </div>
@@ -326,9 +348,7 @@ const App: React.FC = () => {
         className="fixed bottom-6 right-6 z-[100] bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all animate-float flex items-center justify-center group"
         title="Fale comigo no WhatsApp"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-sm">
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"></path>
-        </svg>
+        <WhatsAppIcon size={32} className="drop-shadow-sm" />
       </a>
     </div>
   );
