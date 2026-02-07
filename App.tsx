@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SERVICES, SPECIALTIES, TESTIMONIALS, FAQS, WHATSAPP_LINK, INSTAGRAM_LINK } from './constants';
 import OracleChat from './components/OracleChat';
 
