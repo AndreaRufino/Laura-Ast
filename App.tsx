@@ -126,7 +126,7 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto mb-20 rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-50 aspect-video">
             <iframe 
               className="w-full h-full"
-              src="https://player.vimeo.com/video/1162741053" 
+              src="https://player.vimeo.com/video/1163390209" 
               title="Apresentação Laura Astróloga"
               allow="autoplay; fullscreen; picture-in-picture" 
               allowFullScreen
